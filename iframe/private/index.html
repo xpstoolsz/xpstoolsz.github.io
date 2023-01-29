@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>XPS | Home</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+  
+    <script type="php">
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">XPS</span>
+                    <span class="profession">Make school fun</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-terminal icon'></i>
+                    <input type="text" id="terminalinput" placeholder="Enter prompt: ">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html#top">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="index.html#game">
+                            <i class='bx bx-game icon' ></i>
+                            <span class="text nav-text">Games</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="index.html#chat">
+                            <i class='bx bx-chat icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://xpstoolz.github.io/">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Exit</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="top">
+            <div class="text">XPS Tools | Home</div>
+            <hr>
+            <div class="paragraph1">Welcome to XPS tools, where you can find an abundance of games, useful tools and unblocking soloutions. To get started, press on one of the icons on the left of the page.</div>
+        </div>
+
+        <div class="blog">
+            <div class="text">New Official XPS Blog</div>
+            <hr>
+            <div class="blogp1">
+                <div class="blogimg">
+                    <a href="proxy/">
+                        <img src="img/blogpost1.jpg">
+                    </a>
+                </div>
+                <div class="blogtxt">
+                    <div class="text1">XPS Proxy</div>
+                    <hr class="hr1">
+                    <div class="paragraph1">XPS Proxy is a beautifully designed proxy made for both compatability and speed.</div>
+                </div>
+            </div>
+        </div>
+        <div class="game" id="game">
+            <div class="text">Fun Web Games</div>
+            <hr>
+            <div class="games"></div>
+                <div class="row">
+                    <div class="column">
+                        <a href="games/subway.html">
+                            <img src="img/subway.png" alt="Subway Surfers" style="width:80%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="games/paper2.html">
+                            <img src="img/paper2.png" alt="Paper.io 2" style="width:80%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="games/minecraft.html">
+                            <img src="img/minecraft.png" alt="Minecraft" style="width:80%">
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="column">
+                        <a href="games/smash.html">
+                            <img src="img/smash.png" alt="SmashKarts.io" style="width:80%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="games/drift.html">
+                            <img src="img/drift.png" alt="Drift Hunters" style="width:80%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="games/slope.html">
+                            <img src="img/slope.png" alt="Slope" style="width:80%">
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="column">
+                        <a href="games/roblox.html">
+                            <img src="img/roblox.png" alt="Roblox" style="width:80%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="games/skribbl.html">
+                            <img src="img/skribbl.png" alt="Skribbl" style="width:80%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="games/yandex.html">
+                            <img src="img/yndx.png" alt="Slope" style="width:80%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat" id="chat">
+            <div class="text">XPS Chat</div>
+            <hr>
+            <div class="paragraph1">Click <a href="https://simple-chat.eht.repl.co/">here</a> if there is nothing underneath</div>
+            <iframe class="iframe" src="https://simple-chat.eht.repl.co/"></iframe>
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
