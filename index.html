@@ -14,9 +14,9 @@
         <h2>Login</h2>
         <h3>Enter your custom login key:</h3>
 
-        <form class="login-form">
-            <input type="password" autocomplete="on" id="key" placeholder="Enter Key:">
-        </form>
+        <div class="login-form">
+            <input type="password" autocomplete="on" id="key" onkeydown="if (event.keyCode == 13) getInfo()" placeholder="Enter Key:">
+        </div>
         <button onclick="getInfo()">LOGIN</button>
     </div>
 
