@@ -425,3 +425,52 @@ body.dark .home .text{
     width: 100%;
     height: 680px;
 }
+
+
+.bn632-hover {
+    width: 40%;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 50px;
+    height: 80px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:focus {
+    outline: none;
+  }
+  
+  .bn632-hover.bn27 {
+    background-image: linear-gradient(
+      to right,
+      #ff2600,
+      #ff003c,
+      #FF4B2B,
+      #FF416C
+    );
+    box-shadow: 0 4px 30px 0 rgb(240, 117, 96);
+  }
+
+  .achat {
+    padding-left: 27%;
+    padding-right: 27%;
+  }
+
+.chat .text {
+    text-align: center;
+}
