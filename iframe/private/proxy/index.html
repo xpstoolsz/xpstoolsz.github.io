@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
    </head>
    <body>
-      <a href="xpstoolz.github.io">
+      <a href="xpstoolsz.github.io">
          <div class="close-btn">
             <span class="fas fa-times"></span>
          </div>
@@ -20,7 +20,7 @@
             <span class="fas fa-search"></span>
          </div>
          <div class="search-data">
-            <input type="text" id="jamal" required>
+            <input type="text" onkeydown="if (event.keyCode == 13) proxy()" id="jamal" required>
             <div class="line"></div>
             <label>Type to search..</label>
             <button onclick="proxy()">
