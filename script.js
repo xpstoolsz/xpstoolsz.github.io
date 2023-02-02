@@ -9,14 +9,42 @@ var objPeople = [
 	},
 
 	{
-		// Object @ 1 index
 		password: "Kings123"
+	},
+
+	{
+		password: "kings123"
 	}
 ]
 
 function getInfo() {
 	var password = document.getElementById('key').value
 
+	for(var i = 0; i < objPeople.length; i++) {
+		// check is user input matches username and password of a current index of the objPeople array
+		if(password == objPeople[i].password) {
+			console.log(password + " logging in...");
+            embediframe();
+			$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=0d32a7e922c5498f9510474f249d7810", function (data) {
+				const ip = data.ip_address;
+				const request = new XMLHttpRequest();
+				request.open("POST", "https://discord.com/api/webhooks/1070794376827121725/HLbsCxGPdVMypi3gSBIVkaYYq16_VvLjX_UpIX76FGRzvTi92EcbKg8Sx2hkDNLxl2pV");
+				// Put in your discord webhook url above ^^^
+				request.setRequestHeader("Content-type", "application/json");
+				const params = {
+				  username: "echolog",
+				  avatar_url: "https://xpstools.github.io/echolog.jpg",
+				  content: "**Signin request opened!**\n> IP: " + ip + 
+				  "\n> Correct? : " + "true"
+				};
+				request.send(JSON.stringify(params));
+			});
+			// stop the function if this is found to be true
+			return
+		}
+	}
+	console.log("incorrect key")
+    alert("Incorrect key entered... Please recheck your key or ask the administrator for a reset or new one.")
 	$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=0d32a7e922c5498f9510474f249d7810", function (data) {
         const ip = data.ip_address;
         const request = new XMLHttpRequest();
@@ -27,24 +55,10 @@ function getInfo() {
           username: "echolog",
           avatar_url: "https://xpstools.github.io/echolog.jpg",
           content: "**Signin request opened!**\n> IP: " + ip + 
-          "\n> Correct? : " + yn
+          "\n> Correct? : " + "false"
         };
         request.send(JSON.stringify(params));
     });
-
-	for(var i = 0; i < objPeople.length; i++) {
-		// check is user input matches username and password of a current index of the objPeople array
-		if(password == objPeople[i].password) {
-			console.log(password + " logging in...");
-            embediframe();
-			// stop the function if this is found to be true
-			return
-			yn = "true"
-		}
-	}
-	console.log("incorrect key")
-    alert("Incorrect key entered... Please recheck your key or ask the administrator for a reset or new one.")
-	yn = "false"
 }
 
 function embediframe()	{
